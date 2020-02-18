@@ -52,14 +52,11 @@ let newLink = {
 }
 
 let newLinkLove = {
+    marginTop: '10px',
     display: 'block',
     textAlign: 'center',
     position: 'relative',
     border: '1px solid #c4dbf1',
-    background: '#ffffff none repeat-x scroll center left',
-    backgroundImage: 'url(sprite-reddit.e5NqNKsOkdA.png)',
-    backgroundPosition: '0px -278px',
-    backgroundRepeat: 'repeat',
     fontSize: '150%',
     fontWeight: 'bold',
     letterSpacing: '-1px',
@@ -68,17 +65,6 @@ let newLinkLove = {
     
 }
 
-let nub = {
-    position: 'absolute',
-    top: '-1px',
-    right: '-1px',
-    height: '31px',
-    width: '24px',
-    background: '#ffffff none no-repeat scroll center left',
-    backgroundImage: 'url(sprite-reddit.e5NqNKsOkdA.png)',
-    backgroundPosition: '-61px -1369px',
-    backgroundRepeat: 'no-repeat',
-}
 
     return (
         <div style={sideBar}>
@@ -106,7 +92,6 @@ let nub = {
             </div>
             <div style={newLinkLove}>
                 <a href="/newpost" style={newLink}>Submit a new Text Post</a>
-                <div style={nub}>></div>
             </div>
         </div>
     );

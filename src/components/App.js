@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header'
 import SideBar from './SideBar'
+import PostControl from './PostControl'
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
     <div style={page}>
       <Header/>
       <SideBar/>
+      <PostControl/>
     </div>
   );
 }
