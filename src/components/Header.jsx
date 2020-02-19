@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from 'react-router-dom';
 function Header() {
 
     let headerImage = {
@@ -18,7 +18,7 @@ function Header() {
 
     return (
         <div style={header}>
-            <a href="/"><img style={headerImage} src="https://www.cbronline.com/wp-content/uploads/2016/05/what-is-reddit-770x257.png" alt="reddit"/></a>
+            <Link to ='/'><a href="/"><img style={headerImage} src="https://www.cbronline.com/wp-content/uploads/2016/05/what-is-reddit-770x257.png" alt="reddit"/></a></Link>
         </div>
     );
 }

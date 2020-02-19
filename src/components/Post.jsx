@@ -3,41 +3,30 @@ import React from "react";
 class Post extends React.Component{
 
   constructor(props) {
-    console.log(props);
     super(props);
     this.state = {
-      totalLikes: 0,
+      totalLikes: this.props.likes
 
     };
-    this.increaseThumbsUp = this.increaseThumbsUp.bind(this);
-    this.decreaseThumbsUp = this.decreaseThumbsUp.bind(this);
-  }
-increaseThumbsUp(){
-  let newLikesNumber = this.state.totalLikes
-  newLikesNumber += 1
-  this.setState({totalLikes: newLikesNumber})
 }
 
-decreaseThumbsUp(){
-    let newLikesNumber = this.state.totalLikes
-    newLikesNumber -= 1
-    this.setState({totalLikes: newLikesNumber})
-  }
 
 render(){
-  
+
   return(
     <div>
     <h4> {this.props.title}</h4>
     <h4> {this.props.content}</h4>
     <div>
-    <p>{this.state.totalLikes}</p>
-    <p onClick={this.increaseThumbsUp}> 👍</p> 
-    <p onClick={this.decreaseThumbsUp}> 👎 </p> 
+    <p> {this.props.likes}</p>
+    <p onClick={() => this.props.onUpvote(this.props.position)}> 👍</p>
+    <p onClick={() =>this.props.onDownvote(this.props.position)}> 👎 </p> 
     </div>
     </div>
 
   );
 }
+
+
 }
 export default Post;

@@ -5,11 +5,11 @@ import { v4 } from 'uuid';
 function NewPostForm(props){
   let _title = null;
   let _content = null;
-
+  
 
   function handleNewPostFormSubmission(event) {
     event.preventDefault();
-    props.onNewPostCreation({title: _title.value, content: _content.value, id: v4()});
+    props.onNewPostCreation({title: _title.value, content: _content.value, id: v4(), likes: 0, position: (props.postList.length)});
     _title.value = '';
     _content.value = '';
   }
@@ -26,7 +26,7 @@ function NewPostForm(props){
         type='text'
         id='content'
         placeholder='content'
-        ref={(input) => {_content = input;}}/>
+        ref={(textarea) => {_content = textarea;}}/>
 
       <button type='submit'>Create</button>
     </form>

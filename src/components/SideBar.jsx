@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from 'react-router-dom';
 function SideBar() {
     let search = {
         width: '300px',
@@ -20,7 +20,7 @@ function SideBar() {
         fontSize: '11px',
         fontFamily: "verdana",
         marginTop: '12px',
-        
+
     }
 
     let formOptions = {
@@ -62,7 +62,7 @@ let newLinkLove = {
     letterSpacing: '-1px',
     lineHeight: '29px',
     height: '29px',
-    
+
 }
 
 
@@ -72,26 +72,23 @@ let newLinkLove = {
                 <form>
                 <input style={search}
                 type='text'
-                id='title'
                 placeholder='search'/>
 
                 </form>
             </div>
-            <div class="signIn" style={signIn}>
+            <div className="signIn" style={signIn}>
             <form>
             <input style={formOptions}
                 type='text'
-                id='title'
                 placeholder='username'/>
             <input style={formOptions}
                 type='text'
-                id='title'
                 placeholder='password'/>
                 <button style={loginButton} type='submit'>login</button>
             </form>
             </div>
             <div style={newLinkLove}>
-                <a href="/newpost" style={newLink}>Submit a new Text Post</a>
+                <Link to='/newpost'><a href="/newpost" style={newLink}>Submit a new Text Post</a></Link>
             </div>
         </div>
     );
