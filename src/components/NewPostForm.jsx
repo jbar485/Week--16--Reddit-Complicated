@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-
 function NewPostForm(props){
   let _title = null;
   let _content = null;
-  
+
 
   function handleNewPostFormSubmission(event) {
     event.preventDefault();

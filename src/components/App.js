@@ -28,15 +28,18 @@ class App extends React.Component {
   }
   handleIncreaseThumbsUp(position){
    let post = this.state.masterPostList
-   post[position].likes += 1
-   this.setState({masterPostList: post})
-
+     post[position].likes += 1
+     this.setState({masterPostList: post})
   }
 
   handleDecreaseThumbsUp(position){
     let post = this.state.masterPostList
+    if (post[position].likes == 0) {
+      post = post
+    } else {
     post[position].likes -= 1
     this.setState({masterPostList: post})
+  }
     }
 
 

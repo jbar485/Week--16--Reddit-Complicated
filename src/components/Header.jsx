@@ -18,7 +18,7 @@ function Header() {
 
     return (
         <div style={header}>
-            <Link to ='/'><a href="/"><img style={headerImage} src="https://www.cbronline.com/wp-content/uploads/2016/05/what-is-reddit-770x257.png" alt="reddit"/></a></Link>
+            <Link to ='/'><img style={headerImage} src="https://www.cbronline.com/wp-content/uploads/2016/05/what-is-reddit-770x257.png" alt="reddit"/></Link>
         </div>
     );
 }
